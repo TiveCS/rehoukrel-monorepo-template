@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig.browser.json",
+  "include": ["**/*.ts", "**/*.tsx"],
+  "compilerOptions": {
+    // Workspace-specific path aliases
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    // Browser/React specific settings
+    "target": "ES2022",
+    "module": "ESNext",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+
+    // Vite/bundler types
+    "types": ["vite/client"],
+
+    // Disable verbatimModuleSyntax for better Vite compatibility
+    "verbatimModuleSyntax": false,
+
+    // Enable stricter linting for frontend code
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noUncheckedSideEffectImports": true
+  }
+}
