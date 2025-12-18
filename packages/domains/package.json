@@ -1,0 +1,27 @@
+{
+  "name": "@repo/domains",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "exports": {
+    ".": "./index.ts",
+    "./finance": "./modules/finance/index.ts"
+  },
+  "scripts": {
+    "build": "tsc --noEmit",
+    "check-types": "tsc --noEmit",
+    "lint": "biome check .",
+    "format": "biome format ."
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.3.10",
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@repo/core": "workspace:*",
+    "zod": "^4.2.1"
+  }
+}

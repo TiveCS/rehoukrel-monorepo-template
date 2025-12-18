@@ -1,0 +1,37 @@
+{
+  "$schema": "https://turborepo.com/schema.json",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build", "check-types"],
+      "outputs": ["dist/**", ".next/**", "!.next/cache/**", ".vinxi/**", ".output/**"]
+    },
+    "@repo/core#build": {
+      "dependsOn": ["check-types"],
+      "outputs": []
+    },
+    "@repo/domains#build": {
+      "dependsOn": ["^build", "check-types"],
+      "outputs": []
+    },
+    "check-types": {
+      "dependsOn": ["^check-types"],
+      "outputs": []
+    },
+    "dev": {
+      "dependsOn": ["^build"],
+      "cache": false,
+      "persistent": true
+    },
+    "lint": {
+      "dependsOn": ["^build"]
+    },
+    "format": {
+      "outputs": [],
+      "cache": false
+    },
+    "test": {
+      "dependsOn": ["^build"],
+      "outputs": ["coverage/**"]
+    }
+  }
+}

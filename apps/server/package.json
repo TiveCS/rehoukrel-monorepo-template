@@ -1,0 +1,23 @@
+{
+  "name": "server",
+  "version": "1.0.50",
+  "scripts": {
+    "build": "bun build src/index.ts --outdir dist --target bun",
+    "check-types": "tsc --noEmit",
+    "dev": "bun run --watch src/index.ts",
+    "start": "bun run dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "biome check .",
+    "format": "biome format ."
+  },
+  "dependencies": {
+    "@repo/core": "workspace:*",
+    "@repo/domains": "workspace:*",
+    "elysia": "latest"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.3.10",
+    "bun-types": "latest"
+  },
+  "module": "src/index.js"
+}
