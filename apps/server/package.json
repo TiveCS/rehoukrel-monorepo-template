@@ -1,32 +1,41 @@
 {
-  "name": "server",
-  "version": "1.0.50",
-  "scripts": {
-    "build": "bun build src/index.ts --outdir dist --target bun",
-    "check-types": "tsc --noEmit",
-    "dev": "bun run --watch src/index.ts",
-    "start": "bun run dist/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "biome check .",
-    "format": "biome format ."
-  },
-  "dependencies": {
-    "@elysiajs/cors": "^1.4.0",
-    "@elysiajs/openapi": "^1.4.12",
-    "@repo/core": "workspace:*",
-    "@repo/domains": "workspace:*",
-    "@t3-oss/env-core": "^0.13.10",
-    "better-auth": "^1.4.7",
-    "drizzle-orm": "^0.45.1",
-    "elysia": "latest",
-    "pg": "^8.16.3",
-    "zod": "^4.2.1"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "2.3.10",
-    "@types/pg": "^8.16.0",
-    "bun-types": "latest",
-    "drizzle-kit": "^0.31.8"
-  },
-  "module": "src/index.js"
+	"name": "server",
+	"version": "1.0.50",
+	"scripts": {
+		"build": "bun build src/index.ts --outdir dist --target bun",
+		"check-types": "tsc --noEmit",
+		"dev": "bun run --watch src --watch ../../packages/core --watch ../../packages/domains src/index.ts",
+		"start": "bun run dist/index.js",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"lint": "biome check .",
+		"format": "biome format .",
+		"auth:generate": "bun x @better-auth/cli@latest generate --config ./src/infra/auth/index.ts --output ./src/infra/data/schemas/auth.schema.ts -y",
+		"auth:secret": "openssl rand -base64 32",
+		"db:migrate": "drizzle-kit migrate",
+		"db:generate": "drizzle-kit generate",
+		"db:studio": "drizzle-kit studio",
+		"db:up": "drizzle-kit up",
+		"db:push": "drizzle-kit push",
+		"db:drop": "drizzle-kit drop"
+	},
+	"dependencies": {
+		"@elysiajs/cors": "^1.4.0",
+		"@elysiajs/openapi": "^1.4.12",
+		"@paralleldrive/cuid2": "^3.0.4",
+		"@repo/core": "workspace:*",
+		"@repo/domains": "workspace:*",
+		"@t3-oss/env-core": "^0.13.10",
+		"better-auth": "^1.4.7",
+		"drizzle-orm": "^0.45.1",
+		"elysia": "latest",
+		"pg": "^8.16.3",
+		"zod": "^4.2.1"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.3.10",
+		"@types/pg": "^8.16.0",
+		"bun-types": "latest",
+		"drizzle-kit": "^0.31.8"
+	},
+	"module": "src/index.js"
 }
