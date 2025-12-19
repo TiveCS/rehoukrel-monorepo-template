@@ -1,5 +1,9 @@
 {
   "format_on_save": "on",
+  "code_actions_on_format": {
+    "source.fixAll.biome": true,
+    "source.organizeImports.biome": true
+  },
   "lsp": {
     "biome": {
       "settings": {
@@ -17,6 +21,10 @@
   "languages": {
     "TypeScript": {
       "format_on_save": "on",
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "source.organizeImports.biome": true
+      },
       "formatter": {
         "language_server": {
           "name": "biome"
@@ -26,6 +34,10 @@
     },
     "JavaScript": {
       "format_on_save": "on",
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "source.organizeImports.biome": true
+      },
       "formatter": {
         "language_server": {
           "name": "biome"
@@ -35,6 +47,10 @@
     },
     "TSX": {
       "format_on_save": "on",
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "source.organizeImports.biome": true
+      },
       "formatter": {
         "language_server": {
           "name": "biome"
@@ -44,6 +60,10 @@
     },
     "JSX": {
       "format_on_save": "on",
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "source.organizeImports.biome": true
+      },
       "formatter": {
         "language_server": {
           "name": "biome"
@@ -53,6 +73,9 @@
     },
     "JSON": {
       "format_on_save": "on",
+      "code_actions_on_format": {
+        "source.fixAll.biome": true
+      },
       "formatter": {
         "language_server": {
           "name": "biome"
@@ -61,6 +84,9 @@
     },
     "JSONC": {
       "format_on_save": "on",
+      "code_actions_on_format": {
+        "source.fixAll.biome": true
+      },
       "formatter": {
         "language_server": {
           "name": "biome"
