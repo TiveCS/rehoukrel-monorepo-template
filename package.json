@@ -15,7 +15,11 @@
     "add:server": "bun add --cwd apps/server",
     "add:web": "bun add --cwd apps/web",
     "add:core": "bun add --cwd packages/core",
-    "add:domains": "bun add --cwd packages/domains"
+    "add:domains": "bun add --cwd packages/domains",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "docker:clean": "docker-compose down -v"
   },
   "packageManager": "bun@1.3.5",
   "devDependencies": {

@@ -5,7 +5,12 @@
       "Bash(cat:*)",
       "Bash(bunx turbo:*)",
       "Bash(git show:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(test:*)",
+      "Bash(bun add:*)",
+      "Bash(bunx tsc:*)",
+      "Bash(timeout 3 bun run dev:*)"
     ]
   }
 }

@@ -4,17 +4,13 @@
     // Node.js/Bun runtime specific settings
     "target": "ES2021",
     "module": "ES2022",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
 
     // Bun runtime types
     "types": ["bun-types"],
 
     // Node.js interop
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-
-    // Override base settings for Node.js compatibility
-    "verbatimModuleSyntax": false,
-    "allowImportingTsExtensions": false
+    "forceConsistentCasingInFileNames": true
   }
 }

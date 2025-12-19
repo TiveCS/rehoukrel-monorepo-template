@@ -13,7 +13,9 @@
   "dependencies": {
     "@repo/core": "workspace:*",
     "@repo/domains": "workspace:*",
-    "elysia": "latest"
+    "@t3-oss/env-core": "^0.13.10",
+    "elysia": "latest",
+    "zod": "^4.2.1"
   },
   "devDependencies": {
     "@biomejs/biome": "2.3.10",
