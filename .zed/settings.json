@@ -1,0 +1,71 @@
+{
+  "format_on_save": "on",
+  "lsp": {
+    "biome": {
+      "settings": {
+        "require_config_file": false
+      }
+    },
+    "typescript-language-server": {
+      "initialization_options": {
+        "preferences": {
+          "disableSuggestions": false
+        }
+      }
+    }
+  },
+  "languages": {
+    "TypeScript": {
+      "format_on_save": "on",
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      },
+      "preferred_line_length": 120
+    },
+    "JavaScript": {
+      "format_on_save": "on",
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      },
+      "preferred_line_length": 120
+    },
+    "TSX": {
+      "format_on_save": "on",
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      },
+      "preferred_line_length": 120
+    },
+    "JSX": {
+      "format_on_save": "on",
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      },
+      "preferred_line_length": 120
+    },
+    "JSON": {
+      "format_on_save": "on",
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      }
+    },
+    "JSONC": {
+      "format_on_save": "on",
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      }
+    }
+  }
+}
